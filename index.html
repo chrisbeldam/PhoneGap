@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="css/Accordion.css" />
+    <link rel="stylehseet" type="text/css" href="css/dcalendar.picker.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/dcalendar.picker.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    <title>The Birthday Reminder!</title>
+</head>
+
+<body>
+
+      <div id="card"> 
+        <div class="front"> 
+            <h1>A Reminder!</h1>
+        </div>
+        <div class="back">
+            <h1>Because you're forgetful!</h1>
+        </div> 
+    </div>
+    <!--<div>
+        <h1 id ="app-title">The Birthday Extra</h1>
+        <!--<div id="deviceready" class="blink">
+            <p class="event listening">Connecting to Device</p>
+            <p class="event received">Loaded</p>
+        </div>-->
+    <div>
+        <p> Welcome to <b>The Birthday Reminder</b>, this app will help you remember birthdays!
+            It will also give you some information on what your friends and families interests are! (Presents..)
+        </p>
+    </div>
+
+    <!--<div class="birthdays">
+        <h1 id="birthday-header">Birthdays:</h1>
+    </div>-->
+    <div id="card2"> 
+        <div class="front"> 
+            <h1>Birthdays:</h1>
+        </div>
+        <div class="back">
+            <h1>For everyone!</h1>
+        </div> 
+    </div>             
+    <!--<div class="calendar"> <!-- This needs to be played with -->
+        <!--<label for="meeting"><b>Current Date:</b> </label><input id="meeting" type="date" value="01-18-2017"/>
+    <!</div>-->
+    <div class="calendar-intro">
+        <p>Please use the calendar below to determine the day of the a persons birthday.
+        It will also allow you to see how long you have until their birthday.</p>
+        </div>
+    <div id="calendar-demo">
+        </div>
+        <div class="people-Accordion">
+            <div class="item">
+                <div class="heading">
+                    <h2>Sam</h2>
+                </div>
+                <div class="accordion-content">
+                    <p><b>Interests:</b> Cats, Childcare, Simply Red</p>
+                    <p><b>Age:</b> 48</p>
+                    <p><b>Birthday:</b> 25/01/1969</p>
+                    <p><b>Address:</b> 26 Royal Oak Close, Biggleswade</p>
+                    <p><b>Postcode:</b> SG18 0BQ</p>
+                    <a onclick="openPage('http://www.simplyred.com')">Suggested Present</a>
+                    <a onclick="openPage('http://www.simplyred.com')"><img src="img/sam.jpg"></a>
+                    <br></br>
+                    <button id="samBirthday" onclick="samBirthday()">Extra</button>
+                </div>
+            </div>
+              <div class="item">
+                <div class="heading">
+                    <h2>Michael</h2>
+                </div>
+                <div class="accordion-content">
+                    <p><b>Interests:</b> Tottenham, WW2 Films, Brandy, History</p>
+                    <p><b>Age:</b> 80</p>
+                    <p><b>Birthday:</b> 01/04/1936</p>
+                    <p><b>Address:</b> 10 Ashes Close, Frinton</p>
+                    <p><b>Postcode:</b> CO14 8TZ</p>
+                    <a onclick="openPage('http://www.hbo.com/band-of-brothers')">Suggested Present</a>
+                    <a onclick="openPage('http://www.hbo.com/band-of-brothers')"><img src="img/michael.jpg"></a>
+                    <br></br>
+                    <button id="michaelBirthday" onclick="michaelBirthday()">Extra</button>
+                </div>
+            </div>
+             <div class="item">
+                <div class="heading">
+                    <h2>Pierce</h2>
+                </div>
+                <div class="accordion-content">
+                    <p><b>Interests:</b> Halo, Tech, Computers, Take That,  </p>
+                    <p><b>Age:</b> 19</p>
+                    <p><b>Birthday:</b> 03/06/1997</p>
+                    <p><b>Address:</b> 2 Beech Avenue, Biggleswade</p>
+                    <p><b>Postcode:</b> SG18 0EG</p>
+                    <a onclick="openPage('https://www.halowaypoint.com/en-gb')">Suggested Present</a>
+                    <a onclick="openPage('https://www.halowaypoint.com/en-gb')"><img src="img/pierce.jpg"></a>
+                    <br></br>
+                    <button id="pierceBirthday" onclick="pierceBirthday()">Extra</button>
+                </div>
+            </div>
+              <div class="item">
+                <div class="heading">
+                    <h2>Chris</h2>
+                </div>
+                <div class="accordion-content">
+                    <p><b>Interests:</b> Arsenal, Tech, Computers, Guitars, Johnny Cash, Jimi Hendrix</p>
+                    <p><b>Age:</b> 19</p>
+                    <p><b>Birthday:</b> 06/06/1997</p>
+                    <p><b>Address:</b> 26 Royal Oak Close, Biggleswade</p>
+                    <p><b>Postcode:</b> SG18 0BQ</p>
+                    <a onclick="openPage('http://www.arsenal.com')">Suggested Present</a>
+                    <a onclick="openPage('http://www.arsenal.com')"><img src="img/chris.png"></a>
+                    <br></br>
+                    <button id="myBirthday" onclick="myBirthday()">Extra</button>
+                </div>
+            </div>
+              <div class="item">
+                <div class="heading">
+                    <h2>Rebecca</h2>
+                </div>
+                <div class="accordion-content">
+                    <p><b>Interests:</b> Singing, Acting ,Dancing ,Theatre, Musicals, Musical Instruments</p>
+                    <p><b>Age:</b> 22</p>
+                    <p><b>Birthday:</b> 24/10/1994</p>
+                    <p><b>Address:</b> 26 Royal Oak Close, Biggleswade</p>
+                    <p><b>Postcode:</b> SG18 0BQ</p>
+                    <a onclick="openPage('http://www.royalalberthall.com')">Suggested Present</a>
+                    <a onclick="openPage('http://www.royalalberthall.com')"><img src="img/rebecca.hpg.png"></a>
+                    <br></br>
+                    <button id="rebeccaBirthday" onclick="rebeccaBirthday()">Extra</button>
+                </div>
+            </div>
+              <div class="item">
+                <div class="heading">
+                    <h2>Matthew</h2>
+                </div>
+                <div class="accordion-content">
+                     <p><b>Interests:</b> Tech, Tottenham, Star Trek, Ultravox</p>
+                     <p><b>Age:</b> 50</p>
+                     <p><b>Birthday:</b> 30/10/1966</p>
+                     <p><b>Address:</b> 77 Mounment Court, Stevenage</p>
+                     <p><b>Postcode:</b> SG1 3BT</p>
+                    <a onclick="openPage('http://www.tottenhamhotspur.com')">Suggested Present</a>
+                    <a onclick="openPage('http://www.tottenhamhotspur.com')"><img src="img/matt.png"></a>
+                    <br></br>
+                    <button id="mattBirthday" onclick="mattBirthday()">Extra</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<script src="http://192.168.11.28:8080/target/target-script-min.js#anonymous"></script>-->
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/jAccordion.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+        // var people = [];
+        // var isOpen = false;
+
+        // $(document).ready(function() {
+        //     $.getJSON("people.json", function(json) {
+        //         people = json.people;
+        //     });
+        // });
+
+         function openPage(url){
+            cordova.InAppBrowser.open(url, '_blank'); // To allow me to open the links inside of the default phone browser and on the web preview
+        }
+        
+        $("#calendar-demo").dcalendar(); //Allows me to have the calendar on the top of the page. Jquery - Plugin
+
+        $('.people-Accordion').jAccordion(); //Accordion which allows the drop downs
+
+        $("#card").flip(); //Flips the introduction heading
+
+        $("#card2").flip(); //Flips my Birthday and shows "for all your friends" once it has been flipped
+
+        $("#today").delay(4000).fadeIn(1000).fadeOut(1000).fadeIn(1000).fadeOut(1000).fadeIn(1000).fadeOut(1000).fadeIn(1000); //Fades in the Todays Date section 3 times after a delay
+
+        function myBirthday()  //Some alert messages which display when clicked - Funny gesture really
+        {
+            alert("You should really remember your own birthday!");
+        }
+
+        function michaelBirthday()
+        {
+            alert("APRIL FOOOLSSS!!!");
+        }
+
+        function pierceBirthday()
+        {
+            alert("Only 3 days before your own birthday..");
+        }
+
+        function samBirthday()
+        {
+            alert("1 month after Christmas! Easy to remember");
+        }
+
+        function rebeccaBirthday()
+        {
+            alert("Two months and a day until christmas!");
+        }
+
+        function mattBirthday()
+        {
+            alert("The last birthday of the year!")
+        }
+        
+      
+        function interests(name) //Finds the name and place the correct interests in the accordion
+        {
+            var el = $("#" + name + "About");
+
+            for (var i = 0; i < people.length; i++) {
+                if(people[i].name === name) {
+                    if (!isOpen) {
+                        el.slideDown();
+                    } else {
+                        el.slideUp();
+                    }
+
+                    isOpen = !isOpen;
+
+                    break;
+                } else {
+                    $('.details').slideUp();
+                }
+            }
+
+            return true;
+        } 
+    </script> 
+</body>
+</html>

@@ -1,0 +1,55 @@
+.jAccordion {
+    position: relative;
+}
+
+.item {
+    display: block;
+    position: relative;
+    background: white;
+    border:solid;
+    border-color:black;
+    border-radius:11px;
+    overflow:hidden;
+    margin-bottom:10px;
+    border-width:thick;
+}
+
+.heading {
+    position: relative;
+    background: #ffffff;
+    padding: 10px 15px;
+    font-weight: bold;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    overflow:hidden;
+}
+
+.heading:hover {
+    cursor: pointer;
+    background: #ffffff;
+}
+
+.accordion-content {
+    padding: 10px 15px;
+    background: #ffffff;
+    display: none;
+    text-align: center;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+    border-bottom:10px;
+}
+
+.accordion-content img {
+    margin-top:8px;
+    margin-left:15px;
+    display:inline-block;
+    margin-right:10px;
+}
+.accordion-content a {
+    color:rgb(57,177,255);
+    margin-right: 15px;
+}
+
+.item.selected .heading {
+    background: #bfbfbf;
+}

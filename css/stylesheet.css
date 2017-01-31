@@ -1,0 +1,237 @@
+body {
+    background-color:rgb(140,200,255);
+    color:black;
+}
+
+.curvedButton{
+    border: 2px solid;
+    border-radius: 30px;
+    width: 100%;
+    display:block;
+    margin-bottom:10px; /* Puts space under the buttons */
+    padding:10px; /* Fills out the button*/
+    text-align: center;
+    border-color: #75ACD1;
+    background-color:white;
+    color:black;
+    text-decoration-style: none;
+    border-style:solid;
+    box-shadow: 10px 10px 5px #888888;
+    overflow:hidden;
+}
+
+
+p{
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#app-title {
+     text-align: center;
+    border-color:black;
+    background-color:white;
+    border-style:solid;
+    border-width:100%;
+    border-radius:10px;
+    padding-bottom:7px;
+    top: 35%;
+    width: 100%;
+
+    text-shadow:    0 1px 0 hsl(174,5%,80%),
+                    0 2px 0 hsl(174,5%,75%),
+                    0 3px 0 hsl(174,5%,70%),
+                    0 4px 0 hsl(174,5%,66%),
+                    0 5px 0 hsl(174,5%,64%),
+                    0 6px 0 hsl(174,5%,62%),
+                    0 7px 0 hsl(174,5%,61%),
+                    0 8px 0 hsl(174,5%,60%),
+
+                    0 0 5px rgba(0,0,0,.05),
+                    0 1px 3px rgba(0,0,0,.2),
+                    0 3px 5px rgba(0,0,0,.2),
+                    0 5px 10px rgba(0,0,0,.2),
+                    0 10px 10px rgba(0,0,0,.2),
+                    0 20px 20px rgba(0,0,0,.3);
+}
+
+h1 {
+    text-align: center;
+    border-color:black;
+    background-color:white;
+    border-style:solid;
+    border-width:100%;
+    border-radius:10px;
+}
+
+#birthday-header{
+    text-align: center;
+    border-color:black;
+    background-color:white;
+    border-style:solid;
+    padding-bottom:7px;
+    border-width:100%;
+    border-radius:10px;
+    top: 35%;
+    width: 100%;
+    border-width:thick;
+
+    text-shadow:    0 1px 0 hsl(174,5%,80%),
+                    0 2px 0 hsl(174,5%,75%),
+                    0 3px 0 hsl(174,5%,70%),
+                    0 4px 0 hsl(174,5%,66%),
+                    0 5px 0 hsl(174,5%,64%),
+                    0 6px 0 hsl(174,5%,62%),
+                    0 7px 0 hsl(174,5%,61%),
+                    0 8px 0 hsl(174,5%,60%),
+
+                    0 0 5px rgba(0,0,0,.05),
+                    0 1px 3px rgba(0,0,0,.2),
+                    0 3px 5px rgba(0,0,0,.2),
+                    0 5px 10px rgba(0,0,0,.2),
+                    0 10px 10px rgba(0,0,0,.2),
+                    0 20px 20px rgba(0,0,0,.3);
+}
+
+h3 {
+    text-align: center;
+}
+
+h2 {
+    text-align:center;
+    top: 35%;
+    width: 100%;
+
+    text-shadow:    0 1px 0 hsl(174,5%,80%),
+                    0 2px 0 hsl(174,5%,75%),
+                    0 3px 0 hsl(174,5%,70%),
+                    0 4px 0 hsl(174,5%,66%),
+                    0 5px 0 hsl(174,5%,64%),
+                    0 6px 0 hsl(174,5%,62%),
+                    0 7px 0 hsl(174,5%,61%),
+                    0 8px 0 hsl(174,5%,60%),
+
+                    0 0 5px rgba(0,0,0,.05),
+                    0 1px 3px rgba(0,0,0,.2),
+                    0 3px 5px rgba(0,0,0,.2),
+                    0 5px 10px rgba(0,0,0,.2),
+                    0 10px 10px rgba(0,0,0,.2),
+                    0 20px 20px rgba(0,0,0,.3);
+}
+
+#today {
+    padding-top:15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom:14px;
+    top: 35%;
+    width: 100%;
+    font-size:22px;
+
+    text-shadow:    0 1px 0 hsl(174,5%,80%),
+                    0 2px 0 hsl(174,5%,75%),
+                    0 3px 0 hsl(174,5%,70%),
+                    0 4px 0 hsl(174,5%,66%),
+                    0 5px 0 hsl(174,5%,64%),
+                    0 6px 0 hsl(174,5%,62%),
+                    0 7px 0 hsl(174,5%,61%),
+                    0 8px 0 hsl(174,5%,60%),
+
+                    0 0 5px rgba(0,0,0,.05),
+                    0 1px 3px rgba(0,0,0,.2),
+                    0 3px 5px rgba(0,0,0,.2),
+                    0 5px 10px rgba(0,0,0,.2),
+                    0 10px 10px rgba(0,0,0,.2),
+                    0 20px 20px rgba(0,0,0,.3);
+
+}
+.calendar{
+    text-align: center;
+    background-color:white;
+    color:black;
+    border-style:solid;
+    margin-bottom:15px;
+    border-radius:10px;
+    /*padding-left:65px;
+	padding-bottom:10px;
+	padding-top:10px;*/
+    border-width:100%;
+    display: inline-table;
+    width:98%;
+    border-width:thick;
+}
+
+.calendar thead th {
+    font-size: 25px;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.calendar thead tr #prev {
+    font-size:50px;
+    text-align: center;
+   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.calendar thead tr #next {
+    font-size:50px;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.calendar thead td{
+    margin-top:10px;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.app h1{
+    background-color:white;
+    border-radius:10px;
+    border-color:black;
+    border-width:100%;
+    border-style:solid;
+}
+
+#text-link{
+    text-decoration:none;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(200,255,255);;
+}
+
+.hide {
+    display: none;
+}
+
+#card h1 {
+    margin: 0;
+    border-width:thick;
+    padding:2px;
+}
+
+#card2 h1 {
+    margin: 0;
+    border-width:thick;
+    padding:2px;
+}
+
+button {  /* This is for the button which when clicked displays the alert */
+    color:black;
+    border-color:black;
+    border-style: solid;
+    border-width:4px;
+    border-radius:10px;
+    background-color:rgb(140,200,255);
+    padding:25px;
+    margin-top:9px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*button:hover {
+    background-color:blue;
+    text-transform:uppercase;
+    color:white;
+    padding:15px;
+    }
+    */

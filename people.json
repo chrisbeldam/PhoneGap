@@ -1,0 +1,30 @@
+{
+  "people": [
+    {
+      "name":"becca",
+      "interests": "Singing Acting Dancing Theatre Musicals Musical Instruments",
+      "age":"22",
+      "birthday": ""
+    },
+    {
+      "name":"matt",
+      "interests":"Tech Tottenham StarTrek Ultravox",
+      "age":"50"
+    },
+    {
+      "name":"michael",
+      "interests":"WW2Films Tottenham Brandy History",
+      "age":"75"
+    },
+    {
+      "name":"sam",
+      "interests":"Cats Childcare Simplyred",
+      "age":"48"
+    },
+    {
+      "name":"chris",
+      "interests":"Arssenal Tech Guitars",
+      "age":"19"
+    }
+  ]
+}
